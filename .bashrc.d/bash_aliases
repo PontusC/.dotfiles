@@ -1,0 +1,6 @@
+# Set editor
+export EDITOR=nvim
+
+# Add aliases
+alias ipython="ipython3"
+alias clip="xclip -selection clipboard"

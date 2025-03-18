@@ -1,0 +1,7 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/themes/ayu_mirage.toml"
+]
+
+[window]
+padding = { x = 10, y = 5 }
