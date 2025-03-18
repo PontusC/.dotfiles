@@ -8,3 +8,5 @@ firefox
 docker
 rofi
 ipython
+sshd
+luarocks
