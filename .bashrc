@@ -22,8 +22,10 @@ if [ -d ~/.bashrc.d ]; then
         fi
     done
 fi
-unset rc
-. "$HOME/.cargo/env"
+
+# Add nvim to path
+export PATH="$PATH:/opt/nvim-linuyx-x86_64/bin"
+
 source ~/.bash_completion/alacritty
 
 # Prompt
