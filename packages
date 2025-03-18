@@ -12,3 +12,4 @@ sshd
 luarocks
 fd-find
 ripgrep
+python3-pip
