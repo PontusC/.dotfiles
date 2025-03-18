@@ -1,8 +1,9 @@
-1. Install packages
-2. Get following settings from repos:
+Install packages
+Get following settings from repos:
 	- Alacritty themes
 	- Nerdfont (FiraCode)
-´	- Nvim config
-3. Gen SSH-key and add to services
-4. Setup SSHD for remote access
-5. Setup power profile for correct behaviour
+	- Nvim config
+Gen SSH-key and add to services
+Setup groups (docker) for sudo
+Setup SSHD for remote access
+Setup power profile for correct behaviour
