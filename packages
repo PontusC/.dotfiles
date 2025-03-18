@@ -10,3 +10,5 @@ rofi
 ipython
 sshd
 luarocks
+fd-find
+ripgrep
