@@ -23,8 +23,12 @@ if [ -d ~/.bashrc.d ]; then
     done
 fi
 
+# Editor
+export VISUAL=nvim
+export editor="$VISUAL"
+
 # Add nvim to path
-export PATH="$PATH:/opt/nvim-linuyx-x86_64/bin"
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 source ~/.bash_completion/alacritty
 
