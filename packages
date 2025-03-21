@@ -3,6 +3,7 @@ starship
 alacritty
 bat
 nvim
+npm
 dmenu
 firefox
 docker
