@@ -8,6 +8,7 @@ firefox
 docker
 rofi
 ipython
+python3.12-venv
 sshd
 luarocks
 fd-find
