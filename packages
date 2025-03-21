@@ -13,3 +13,7 @@ luarocks
 fd-find
 ripgrep
 python3-pip
+tldr
+tree
+fzf
+silversearcher-ag
