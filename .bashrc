@@ -24,13 +24,21 @@ if [ -d ~/.bashrc.d ]; then
 fi
 
 # Editor
-export VISUAL=nvim
-export editor="$VISUAL"
+export VISUAL="/opt/nvim-linux-x86_64/bin/nvim"
+export EDITOR="$visual"
+export SUDO_EDITOR="$VISUAL"
 
 # Add nvim to path
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
+# Add settings to FZF to show .dotfiles but hide gitignored files
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+
+# Alacritty autocompletion
 source ~/.bash_completion/alacritty
+
+# Print TODO-list if not empty
+bat ~/notes/TODO
 
 # Prompt
 eval "$(starship init bash)"

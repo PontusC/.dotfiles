@@ -1,6 +1,23 @@
-# Set editor
-export EDITOR=nvim
-
 # Add aliases
 alias ipython="ipython3"
 alias clip="xclip -selection clipboard"
+alias bat="/usr/bin/batcat"
+alias N="nvim"
+alias balias="~/.bashrc.d/bash_aliases"
+alias bashrc="~/.bashrc"
+alias 'sbat'="sudo batcat"
+alias ll="ls -l"
+
+# Add git aliases
+alias gadd="git add"
+alias gcmt="git commit"
+alias gst="git status"
+
+# Add python alias
+alias ve="python3 -m venv ./venv"
+alias va="source ./venv/bin/activate"
+
+# Add nvim aliases
+alias nconf="nvim ~/.config/nvim/init.lua"
+alias bconf="nvim ~/.bashrc"
+alias aliasconf="nvim ~/.bashrc.d/bash_aliases"

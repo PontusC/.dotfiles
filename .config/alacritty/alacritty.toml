@@ -4,4 +4,5 @@ import = ["~/.config/alacritty/themes/themes/ayu_mirage.toml"]
 padding = { x = 10, y = 5 }
 
 [font]
-size = 6
+size = 7
+normal = { family = "FiraCode Nerd Font", style = "Regular" }
