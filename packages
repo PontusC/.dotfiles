@@ -11,6 +11,7 @@ rofi
 ipython
 python3.12-venv
 pylint
+pylint-venv
 sshd
 luarocks
 fd-find
