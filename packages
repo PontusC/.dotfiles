@@ -3,11 +3,15 @@ starship
 alacritty
 bat
 nvim
+npm
 dmenu
 firefox
 docker
 rofi
 ipython
+python3.12-venv
+python3-pylint
+python3-pylint-venv
 sshd
 luarocks
 fd-find
@@ -17,3 +21,5 @@ tldr
 tree
 fzf
 silversearcher-ag
+lazygit
+lazydocker
