@@ -25,7 +25,7 @@ fi
 
 # Editor
 export VISUAL="/opt/nvim-linux-x86_64/bin/nvim"
-export EDITOR="$visual"
+export EDITOR="$VISUAL"
 export SUDO_EDITOR="$VISUAL"
 
 # Add nvim to path
@@ -38,7 +38,7 @@ export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 source ~/.bash_completion/alacritty
 
 # Print TODO-list if not empty
-bat ~/notes/TODO
+echo "$(grep -v '^#' ~/notes/TODO)" | cat
 
 # Prompt
 eval "$(starship init bash)"

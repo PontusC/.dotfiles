@@ -5,10 +5,10 @@ alias bat="/usr/bin/batcat"
 alias n="nvim"
 alias balias="~/.bashrc.d/bash_aliases"
 alias bashrc="~/.bashrc"
-alias 'sbat'="sudo batcat"
+alias sbat="sudo batcat"
 alias ll="ls -l"
-alias setenv="export $(grep -v '^#' .env | xargs)"
-alias unsetenv="unset $(grep -v '^#' .env | sed -E 's/(.*)=.*/\1/' | xargs)"
+alias aenv="export \$(grep -v '^#' .env | xargs)"
+alias denv="unset \$(grep -v '^#' .env | sed -E 's/(.*)=.*/\1/' | xargs)"
 
 # Add git aliases
 alias gadd="git add"
@@ -20,6 +20,7 @@ alias lgt="lazygit"
 alias python="python3"
 alias ve="python3 -m venv ./venv"
 alias va="source ./venv/bin/activate"
+alias da="deactivate"
 
 # Add nvim aliases
 alias nconf="nvim ~/.config/nvim/init.lua"
