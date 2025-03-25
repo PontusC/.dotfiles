@@ -7,3 +7,4 @@ Gen SSH-key and add to services
 Setup groups (docker) for sudo
 Setup SSHD for remote access
 Setup power profile for correct behaviour
+Enable both English(swedish) and English (international altgr dead keys) keyboard layouts
