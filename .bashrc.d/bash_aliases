@@ -10,6 +10,8 @@ alias ll="ls -l"
 alias aenv="export \$(grep -v '^#' .env | xargs)"
 alias denv="unset \$(grep -v '^#' .env | sed -E 's/(.*)=.*/\1/' | xargs)"
 
+# Folder aliases for fast navigation
+
 # Add git aliases
 alias gadd="git add"
 alias gcmt="git commit"
@@ -27,7 +29,8 @@ alias nconf="nvim ~/.config/nvim/init.lua"
 alias bconf="nvim ~/.bashrc"
 alias aconf="nvim ~/.bashrc.d/bash_aliases"
 alias iconf="nvim ~/.config/i3/config"
-alias todo="nvim ~/notes/TODO"
+alias ctodo="nvim ~/notes/TODO"
+alias todo="cat ~/notes/TODO"
 
 # Add docker aliases
 alias ldk="lazydocker"
