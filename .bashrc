@@ -37,6 +37,9 @@ export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 # Alacritty autocompletion
 source ~/.bash_completion/alacritty
 
+# Kubectl autocompletion
+source <(kubectl completion bash)
+
 # Print TODO-list if not empty
 echo "$(grep -v '^#' ~/notes/TODO)" | cat
 

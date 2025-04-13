@@ -30,7 +30,7 @@ alias bconf="nvim ~/.bashrc"
 alias aconf="nvim ~/.bashrc.d/bash_aliases"
 alias iconf="nvim ~/.config/i3/config"
 alias ctodo="nvim ~/notes/TODO"
-alias todo="cat ~/notes/TODO"
+alias todo="clear && cat ~/notes/TODO"
 
 # Add docker aliases
 alias ldk="lazydocker"
