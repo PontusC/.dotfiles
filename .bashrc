@@ -11,6 +11,10 @@ if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
 fi
 export PATH
 
+# Use bash-completion, if available
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
+    . /usr/share/bash-completion/bash_completion
+
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
@@ -24,9 +28,6 @@ export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 # Add settings to FZF to show .dotfiles but hide gitignored files
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
-
-# Source complete-alias bashcompletion script
-source ~/.bash_completion/complete_alias
 
 # Alacritty autocompletion
 source ~/.bash_completion/alacritty
@@ -45,6 +46,9 @@ if [ -d ~/.bashrc.d ]; then
         fi
     done
 fi
+
+# Source complete-alias bashcompletion script
+source ~/.bash_completion/complete_alias
 
 # Prompt
 eval "$(starship init bash)"

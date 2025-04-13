@@ -9,6 +9,8 @@ alias sbat="sudo batcat"
 alias ll="ls -l"
 alias aenv="export \$(grep -v '^#' .env | xargs)"
 alias denv="unset \$(grep -v '^#' .env | sed -E 's/(.*)=.*/\1/' | xargs)"
+# Below is required for the complete-alias script
+alias sudo="sudo"
 
 # Folder aliases for fast navigation
 
@@ -39,3 +41,5 @@ alias todo="clear && cat ~/notes/TODO"
 
 # Add docker aliases
 alias ldk="lazydocker"
+
+complete -F _complete_alias "${!BASH_ALIASES[@]}"

@@ -1051,7 +1051,7 @@ __compal__main
 ##  ============================================================================
 ##  # complete user-defined aliases
 ##  ============================================================================
-complete -F _complete_alias kube
+# complete -F _complete_alias kube
 
 ##  to complete specific aliases, uncomment and edit these lines;
 #complete -F _complete_alias myalias1
@@ -1060,4 +1060,3 @@ complete -F _complete_alias kube
 
 ##  to complete all aliases, run this line after all aliases have been defined;
 #complete -F _complete_alias "${!BASH_ALIASES[@]}"
-
