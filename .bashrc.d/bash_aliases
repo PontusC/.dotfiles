@@ -24,6 +24,10 @@ alias ve="python3 -m venv ./venv"
 alias va="source ./venv/bin/activate"
 alias da="deactivate"
 
+# Minicube alias
+alias kube="kubectl"
+alias mkube="minikube kubectl --"
+
 # Add nvim aliases
 alias nconf="nvim-open ~/.config/nvim/init.lua"
 alias bconf="nvim ~/.bashrc"

@@ -11,6 +11,8 @@ cp ~/.config/i3/config ./.config/i3/config
 # Backup starship
 cp ~/.config/starship.toml ./.config/starship.toml
 
+# Backup autocompletions
+cp ~/.bash_completion/* ./.bash_completion/
+
 # Backup Alacritty
-cp ~/.bash_completion/alacritty ./.bash_completion/alacritty
 cp ~/.config/alacritty/alacritty.toml ./.config/alacritty/alacritty.toml

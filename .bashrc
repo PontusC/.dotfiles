@@ -14,15 +14,6 @@ export PATH
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
-# User specific aliases and functions
-if [ -d ~/.bashrc.d ]; then
-    for rc in ~/.bashrc.d/*; do
-        if [ -f "$rc" ]; then
-            . "$rc"
-        fi
-    done
-fi
-
 # Editor
 export VISUAL="/opt/nvim-linux-x86_64/bin/nvim"
 export EDITOR="$VISUAL"
@@ -34,6 +25,9 @@ export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 # Add settings to FZF to show .dotfiles but hide gitignored files
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 
+# Source complete-alias bashcompletion script
+source ~/.bash_completion/complete_alias
+
 # Alacritty autocompletion
 source ~/.bash_completion/alacritty
 
@@ -42,6 +36,15 @@ source <(kubectl completion bash)
 
 # Print TODO-list if not empty
 echo "$(grep -v '^#' ~/notes/TODO)" | cat
+
+# User specific aliases and functions
+if [ -d ~/.bashrc.d ]; then
+    for rc in ~/.bashrc.d/*; do
+        if [ -f "$rc" ]; then
+            . "$rc"
+        fi
+    done
+fi
 
 # Prompt
 eval "$(starship init bash)"
