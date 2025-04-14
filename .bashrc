@@ -34,6 +34,7 @@ source ~/.bash_completion/alacritty
 
 # Kubectl autocompletion
 source <(kubectl completion bash)
+source <(minikube completion bash)
 
 # Print TODO-list if not empty
 echo "$(grep -v '^#' ~/notes/TODO)" | cat
