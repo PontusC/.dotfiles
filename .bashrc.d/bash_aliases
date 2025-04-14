@@ -28,7 +28,7 @@ alias da="deactivate"
 
 # Minicube alias
 alias kube="kubectl"
-alias mkube="minikube kubectl --"
+alias mkube="minikube"
 
 # Add nvim aliases
 alias nconf="nvim-open ~/.config/nvim/init.lua"
