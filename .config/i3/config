@@ -190,9 +190,10 @@ bar {
     urgent_workspace   #EC69A0 #DB3279 #FFFFFF
     binding_mode       #b691d3 #A07CBC #FFFFFF
   }
-  position top
+  position bottom
   mode hide
-  status_command i3status
+  status_command i3status --config ~/.config/i3/i3status.conf
+  font pango:monospace 16
 }
 
 # >>> Plasma Integration <<<
