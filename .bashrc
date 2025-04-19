@@ -18,28 +18,32 @@ export PATH
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
-# Editor
+# --- Editor
 export VISUAL="/opt/nvim-linux-x86_64/bin/nvim"
 export EDITOR="$VISUAL"
 export SUDO_EDITOR="$VISUAL"
 
-# Add nvim to path
+# --- Add programs to path
+export PATH=~/.npm-global/bin:$PATH
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+. "/usr/local/env"
+. "/home/pontusc/.wasmedge/env"
 
+# --- Source program settings
+# Rust
+. "$HOME/.cargo/env"
 # Add settings to FZF to show .dotfiles but hide gitignored files
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+# LS
+export LS_OPTIONS='--color=auto'
+eval "$(dircolors -b)"
 
-# Alacritty autocompletion
+# --- Autocompletion sourcing
 source ~/.bash_completion/alacritty
-
-# Kubectl autocompletion
 source <(kubectl completion bash)
 source <(minikube completion bash)
 
-# Print TODO-list if not empty
-echo "$(grep -v '^#' ~/notes/TODO)" | cat
-
-# User specific aliases and functions
+# --- User specific aliases and functions
 if [ -d ~/.bashrc.d ]; then
     for rc in ~/.bashrc.d/*; do
         if [ -f "$rc" ]; then
@@ -50,6 +54,11 @@ fi
 
 # Source complete-alias bashcompletion script
 source ~/.bash_completion/complete_alias
+
+# --- Fin
+
+# Print TODO-list if not empty
+echo "$(grep -v '^#' ~/notes/TODO)" | cat
 
 # Prompt
 eval "$(starship init bash)"

@@ -6,6 +6,7 @@ alias n="nvim-open"
 alias balias="~/.bashrc.d/bash_aliases"
 alias bashrc="~/.bashrc"
 alias sbat="sudo batcat"
+alias ls='ls $LS_OPTIONS'
 alias ll="ls -l"
 alias aenv="export \$(grep -v '^#' .env | xargs)"
 alias denv="unset \$(grep -v '^#' .env | sed -E 's/(.*)=.*/\1/' | xargs)"
