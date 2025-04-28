@@ -26,12 +26,12 @@ export SUDO_EDITOR="$VISUAL"
 # --- Add programs to path
 export PATH=~/.npm-global/bin:$PATH
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-. "/usr/local/env"
-. "/home/pontusc/.wasmedge/env"
+# . "/usr/local/env"
+# . "/home/pontusc/.wasmedge/env"
 
 # --- Source program settings
 # Rust
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
 # Add settings to FZF to show .dotfiles but hide gitignored files
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 # LS
@@ -42,6 +42,7 @@ eval "$(dircolors -b)"
 source ~/.bash_completion/alacritty
 source <(kubectl completion bash)
 source <(minikube completion bash)
+source <(tailscale completion bash)
 
 # --- User specific aliases and functions
 if [ -d ~/.bashrc.d ]; then
