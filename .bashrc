@@ -1,3 +1,4 @@
+#!/bin/bash
 # .bashrc
 
 # Source global definitions
@@ -26,12 +27,10 @@ export SUDO_EDITOR="$VISUAL"
 # --- Add programs to path
 export PATH=~/.npm-global/bin:$PATH
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-# . "/usr/local/env"
-# . "/home/pontusc/.wasmedge/env"
 
 # --- Source program settings
 # Rust
-# . "$HOME/.cargo/env"
+. "$HOME/.cargo/env"
 # Add settings to FZF to show .dotfiles but hide gitignored files
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 # LS
@@ -59,7 +58,7 @@ source ~/.bash_completion/complete_alias
 # --- Fin
 
 # Print TODO-list if not empty
-echo "$(grep -v '^#' ~/notes/TODO)" | cat
+grep -v '^#' ~/notes/TODO | cat
 
 # Prompt
 eval "$(starship init bash)"
