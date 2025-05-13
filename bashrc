@@ -16,36 +16,22 @@ export PATH
 [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
     . /usr/share/bash-completion/bash_completion
 
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
-
 # --- Editor
 export VISUAL="/opt/nvim-linux-x86_64/bin/nvim"
 export EDITOR="$VISUAL"
 export SUDO_EDITOR="$VISUAL"
 
 # --- Add programs to path
-export PATH=~/.npm-global/bin:$PATH
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-export PATH="$PATH:$HOME/go/bin/"
 
-# --- Source program settings
-# Rust
-. "$HOME/.cargo/env"
+# --- Global program settings & envvars
 # Add settings to FZF to show .dotfiles but hide gitignored files
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 # LS
 export LS_OPTIONS='--color=auto'
 eval "$(dircolors -b)"
-
-# --- Autocompletion sourcing
-source <(helm completion bash)
-source ~/.bash_completion/alacritty
-source <(tailscale completion bash)
-source <(cmctl completion bash)
-# k3s config
-source <(kubectl completion bash)
-export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+# Yamllint
+export YAMLLINT_CONFIG_FILE=$HOME/.config/nvim/.yamllint.yml
 
 # --- User specific aliases and functions
 if [ -d ~/.bashrc.d ]; then
@@ -56,11 +42,23 @@ if [ -d ~/.bashrc.d ]; then
     done
 fi
 
-# Env variables
-export YAMLLINT_CONFIG_FILE=$HOME/.config/nvim/.yamllint.yml
+# Source computer (e.g. homelab vs laptop) specific settings
+if [ -d ~/.bashrc.d/settings/ ]; then
+    for opts in ~/.bashrc.d/settings/*; do
+        if [ -f "$opts" ]; then
+            . "$opts"
+        fi
+    done
+fi
 
-# Source complete-alias bashcompletion script
-source ~/.bash_completion/complete_alias
+# Source bashcompletion sources and related scripts
+if [ -d ~/.bash_completion ]; then
+    for bcomp in ~/.bash_completion/*; do
+        if [ -f "$bcomp" ]; then
+            . "$bcomp"
+        fi
+    done
+fi
 
 # --- Fin
 

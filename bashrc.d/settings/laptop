@@ -1,0 +1,6 @@
+# -- Paths
+export PATH=~/.npm-global/bin:$PATH
+
+# -- Program settings
+# Rust
+. "$HOME/.cargo/env"

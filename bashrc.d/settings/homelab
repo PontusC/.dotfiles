@@ -1,0 +1,2 @@
+# -- Paths
+export PATH="$PATH:$HOME/go/bin/"

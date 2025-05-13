@@ -1,0 +1,8 @@
+# --- Autocompletion sourcing
+source <(helm completion bash)
+source ~/.bash_completion/alacritty
+source <(tailscale completion bash)
+source <(cmctl completion bash)
+# k3s config
+source <(kubectl completion bash)
+export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
