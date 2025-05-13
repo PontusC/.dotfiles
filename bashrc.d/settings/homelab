@@ -1,2 +1,5 @@
 # -- Paths
 export PATH="$PATH:$HOME/go/bin/"
+
+# -- Program settings
+export KUBECONFIG=/etc/rancher/k3s/k3s.yaml

@@ -42,8 +42,8 @@ if [ -d ~/.bashrc.d ]; then
     done
 fi
 
-# Source computer (e.g. homelab vs laptop) specific settings
-if [ -d ~/.bashrc.d/settings/ ]; then
+# Source computer (e.g. homelab vs laptop) specific shell settings
+if [ -d ~/.bashrc.d/settings ]; then
     for opts in ~/.bashrc.d/settings/*; do
         if [ -f "$opts" ]; then
             . "$opts"

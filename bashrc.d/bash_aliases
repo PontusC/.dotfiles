@@ -13,7 +13,6 @@ alias denv="unset \$(grep -v '^#' .env | sed -E 's/(.*)=.*/\1/' | xargs)"
 # Below is required for the complete-alias script
 alias sudo="sudo"
 
-# Folder aliases for fast navigation
 
 # Add git aliases
 alias gadd="git add"
@@ -27,7 +26,7 @@ alias ve="python3 -m venv ./venv"
 alias va="source ./venv/bin/activate"
 alias da="deactivate"
 
-# Minicube alias
+# K8s alias
 alias kube="kubectl"
 alias mkube="minikube"
 
