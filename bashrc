@@ -1,3 +1,4 @@
+#!/bin/bash
 # .bashrc
 
 # Source global definitions
@@ -30,7 +31,7 @@ export PATH="$PATH:$HOME/go/bin/"
 
 # --- Source program settings
 # Rust
-# . "$HOME/.cargo/env"
+. "$HOME/.cargo/env"
 # Add settings to FZF to show .dotfiles but hide gitignored files
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 # LS
