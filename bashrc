@@ -26,8 +26,7 @@ export SUDO_EDITOR="$VISUAL"
 # --- Add programs to path
 export PATH=~/.npm-global/bin:$PATH
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-# . "/usr/local/env"
-# . "/home/pontusc/.wasmedge/env"
+export PATH="$PATH:$HOME/go/bin/"
 
 # --- Source program settings
 # Rust
@@ -39,10 +38,13 @@ export LS_OPTIONS='--color=auto'
 eval "$(dircolors -b)"
 
 # --- Autocompletion sourcing
+source <(helm completion bash)
 source ~/.bash_completion/alacritty
-source <(kubectl completion bash)
-source <(minikube completion bash)
 source <(tailscale completion bash)
+source <(cmctl completion bash)
+# k3s config
+source <(kubectl completion bash)
+export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 
 # --- User specific aliases and functions
 if [ -d ~/.bashrc.d ]; then
@@ -53,13 +55,16 @@ if [ -d ~/.bashrc.d ]; then
     done
 fi
 
+# Env variables
+export YAMLLINT_CONFIG_FILE=$HOME/.config/nvim/.yamllint.yml
+
 # Source complete-alias bashcompletion script
 source ~/.bash_completion/complete_alias
 
 # --- Fin
 
 # Print TODO-list if not empty
-echo "$(grep -v '^#' ~/notes/TODO)" | cat
+grep -v '^#' ~/notes/TODO | cat
 
 # Prompt
 eval "$(starship init bash)"
