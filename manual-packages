@@ -8,6 +8,6 @@ vivaldi
 docker
 lazygit
 lazydocker
-minikube
 kubectl
 argocd
+bitwarden
